@@ -17,8 +17,6 @@ div#inv {
     animation-iteration-count: 1;
     animation-direction: reverse;
     animation-fill-mode: both;
-  position: fixed;
-  left: 50%;
 }
 
 div#chron {
@@ -32,10 +30,6 @@ div#chron {
     animation-iteration-count: 1;
     animation-direction: reverse;
     animation-fill-mode: both;
-  position: fixed;
-  left: 50%;
-  top: 35px;
-
 }
 div#inv:hover {
   animation-name: inv;
@@ -149,7 +143,7 @@ div#chron:hover {
 <img src="https://c.radikal.ru/c43/1908/4b/07080369317b.png"/>
 <img src="https://c.radikal.ru/c34/1908/9d/6e995483f8d1.png"/>
 </div>
-<a href="http://www.amalirr.com/t1911-topic#107391" target="_blank"><div id="inv"></div></a>
-<a href="http://www.amalirr.com/t1912-topic#107392" target="_blank"><div id="chron"></div></a>
+<a href="http://www.amalirr.com/t1911-topic#107391" target="_blank"><div id="inv" style="position: fixed; left: 50%; transform: translateX(-50%);"></div></a>
+<a href="http://www.amalirr.com/t1912-topic#107392" target="_blank"><div id="chron" style="position: fixed; top: 35px; left: 50%; transform: translateX(-50%);"></div></a>
 </body>
 </html>

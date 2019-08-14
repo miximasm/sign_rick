@@ -2,7 +2,7 @@
 <head>
 </head>
 <style>
-@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
 html{
     -webkit-filter: brightness(1.1) hue-rotate(355deg) saturate(60%);
     filter: brightness(1.1) hue-rotate(355deg) saturate(60%);
@@ -23,6 +23,9 @@ div#inv {
     animation-iteration-count: 1;
     animation-direction: reverse;
     animation-fill-mode: both;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1;
 }
 
 div#chron {
@@ -36,6 +39,9 @@ div#chron {
     animation-iteration-count: 1;
     animation-direction: reverse;
     animation-fill-mode: both;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1;
 }
 div#state {
     width: 200px;
@@ -48,8 +54,23 @@ div#state {
     animation-iteration-count: 1;
     animation-direction: reverse;
     animation-fill-mode: both;
+    z-index: 1;
 }
-
+div#text {
+  opacity: 0;
+  text-shadow: 0px 1px 2px #ABFF00, 0px 2px 3px black;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 0;
+  width: 420px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
 div#inv:hover {
   animation-name: inv;
   animation-duration: 0.1s;
@@ -75,30 +96,7 @@ div#state:hover {
   animation-fill-mode: both;
   animation-direction: initial;
 }
-div#state:hover .tooltiptext {
-  opacity: 1;
-  transition-duration: .3s;
-  transition-timing-function: ease-in-out;
-}
-div#state .tooltiptext {
-  opacity: 0;
-  background-color: black;
-  box-shadow: 0px 6px 7px #ABFF00, 0px 6px 8px black;
-  color: #ABFF00;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-  width: 220px;
-  top: 90%;
-  left: 50%; 
-  margin-left: -110px;
-  font-family: 'Comfortaa', cursive;
-  font-size: 10px;
-  transition-duration: .3s;
-  transition-timing-function: ease-in-out;
-}
+
 @keyframes inv {
   100%   {background-image: url("https://d.radikal.ru/d16/1908/24/35641297417b.png");}
   75%  {background-image: url("https://d.radikal.ru/d06/1908/8d/110bf77d885f.png");}
@@ -224,8 +222,23 @@ div#state .tooltiptext {
 <img src="https://b.radikal.ru/b35/1908/fc/3355f6283aa1.png"/>
 
 </div>
-<a href="http://www.amalirr.com/t1911-topic#107391" target="_blank"><div id="inv" style="position: fixed; left: 50%; transform: translateX(-50%);"></div></a>
-<a href="http://www.amalirr.com/t1912-topic#107392" target="_blank"><div id="chron" style="position: fixed; top: 45px; left: 50%; transform: translateX(-50%);"></div></a>
-<a><div id="state" style="position: fixed; top: 81px; left: 50%; transform: translateX(-50%);"><span class="tooltiptext">Утомлён дорогой и скукой, ищет чем бы занять беспокойное сознание.</span></div></a>
+<a href="http://www.amalirr.com/t1911-topic#107391" target="_blank"><div id="inv" style="position: fixed; left: 35%; transform: translateX(-50%);"></div></a>
+<a href="http://www.amalirr.com/t1912-topic#107392" target="_blank"><div id="chron" style="position: fixed; top: 8px; left: 65%; transform: translateX(-50%);"></div></a>
+<a><div id="state" style="position: fixed; top: 45px; left: 50%; transform: translateX(-50%);"></div></a>
+<a><div id="text" style="position: fixed; top: 8px; left: 50%; transform: translateX(-50%);">Крысиная голова раскалывается после дичайшего бодунища...</div></a>
+<script type="text/javascript"> 
+        document.getElementById("state").onclick = function() { 
+  var x = document.getElementById("myDIV");
+  if (document.getElementById("inv").style.opacity === "0") {
+    document.getElementById("inv").style.opacity = "1";
+    document.getElementById("chron").style.opacity = "1";
+    document.getElementById("text").style.opacity = "0";
+  } else {
+    document.getElementById("inv").style.opacity = "0";
+    document.getElementById("chron").style.opacity = "0";
+    document.getElementById("text").style.opacity = "1";
+  }
+}
+    </script> 
 </body>
 </html>

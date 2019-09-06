@@ -1,259 +1,42 @@
-
 <html>
-<head>
-</head>
 <style>
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Cormorant+Unicase|Kelly+Slab&display=swap');
-html{
-    -webkit-filter: brightness(1.1) hue-rotate(355deg) saturate(60%);
-    filter: brightness(1.1) hue-rotate(355deg) saturate(60%);
-}
-
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 div#preload {
     display:none;
 }
-
-div#inv {
-    width: 200px;
-    height: 50px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    animation-name: inv2;
-    animation-duration: 0.1s;
-    animation-iteration-count: 1;
-    animation-direction: reverse;
-    animation-fill-mode: both;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
-    z-index: 1;
+a {
+    font-family: 'Lobster';
+    font-size: 13;
+    text-decoration: none;
+    color: #1E132D;
+    
 }
-
-div#chron {
-    width: 200px;
-    height: 50px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    animation-name: chron2;
-    animation-duration: 0.1s;
-    animation-iteration-count: 1;
-    animation-direction: reverse;
-    animation-fill-mode: both;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
-    z-index: 1;
+a#link {
+    font-size: 22;
+    text-decoration: none;
+    color: #1E132D;
+    text-shadow: 0px 0px 1.5px rgba(12, 8, 18,0.5);
+    -webkit-transition: 0.4s; /* Safari prior 6.1 */
+    transition: 0.4s;
+    
 }
-div#state {
-    width: 200px;
-    height: 50px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    animation-name: state2;
-    animation-duration: 0.1s;
-    animation-iteration-count: 1;
-    animation-direction: reverse;
-    animation-fill-mode: both;
-    z-index: 1;
+a#link:hover {
+    font-family: 'Lobster', bold;
+    font-size: 22;
+    text-decoration: none;
+    color: rgba(210,255,255,1);
+    text-shadow: 1px 1px 2px rgba(0,100,190,1), 0px 0px 2px rgba(0,100,190,1), -1px -1px 2px rgba(100,100,190,1), 1px -1px 2px rgba(0,100,190,1), -1px 1px 2px rgba(0,100,190,1);
+
+    
 }
-div#text {
-  opacity: 0;
-  text-shadow: 0px 1px 2px #ABFF00, 0px 2px 3px gray;
-  color: black;
-  text-align: center;
-  padding: 0px 0;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 0;
-  width: 420px;
-font-family: 'Kelly Slab', cursive;
-  font-size: 16px;
-  transition-duration: .3s;
-  transition-timing-function: ease-in-out;
-}
-div#inv:hover {
-  animation-name: inv;
-  animation-duration: 0.1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-  animation-direction: initial;
-
-}
-
-div#chron:hover {
-  animation-name: chron;
-  animation-duration: 0.1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-  animation-direction: initial;
-
-}
-
-div#state:hover {
-  animation-name: state;
-  animation-duration: 0.1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-  animation-direction: initial;
-}
-
-@keyframes inv {
-  100%   {background-image: url("https://d.radikal.ru/d16/1908/24/35641297417b.png");}
-  75%  {background-image: url("https://d.radikal.ru/d06/1908/8d/110bf77d885f.png");}
-  50%  {background-image: url("https://c.radikal.ru/c41/1908/79/df53eadabfad.png");}
-  25%  {background-image: url("https://b.radikal.ru/b23/1908/be/4d3237c8a913.png");}
-  0% {background-image: url("https://a.radikal.ru/a38/1908/1b/8173636dba53.png");}
-}
-
-
-@-webkit-keyframes inv {
-  100%   {background-image: url("https://d.radikal.ru/d16/1908/24/35641297417b.png");}
-  75%  {background-image: url("https://d.radikal.ru/d06/1908/8d/110bf77d885f.png");}
-  50%  {background-image: url("https://c.radikal.ru/c41/1908/79/df53eadabfad.png");}
-  25%  {background-image: url("https://b.radikal.ru/b23/1908/be/4d3237c8a913.png");}
-  0% {background-image: url("https://a.radikal.ru/a38/1908/1b/8173636dba53.png");}
-}
-
-
-@keyframes inv2 {
-  100%   {background-image: url("https://d.radikal.ru/d16/1908/24/35641297417b.png");}
-  75%  {background-image: url("https://d.radikal.ru/d06/1908/8d/110bf77d885f.png");}
-  50%  {background-image: url("https://c.radikal.ru/c41/1908/79/df53eadabfad.png");}
-  25%  {background-image: url("https://b.radikal.ru/b23/1908/be/4d3237c8a913.png");}
-  0% {background-image: url("https://a.radikal.ru/a38/1908/1b/8173636dba53.png");}
-}
-
-
-@-webkit-keyframes inv2 {
-  100%   {background-image: url("https://d.radikal.ru/d16/1908/24/35641297417b.png");}
-  75%  {background-image: url("https://d.radikal.ru/d06/1908/8d/110bf77d885f.png");}
-  50%  {background-image: url("https://c.radikal.ru/c41/1908/79/df53eadabfad.png");}
-  25%  {background-image: url("https://b.radikal.ru/b23/1908/be/4d3237c8a913.png");}
-  0% {background-image: url("https://a.radikal.ru/a38/1908/1b/8173636dba53.png");}
-}
-
-@keyframes chron {
-  100% {background-image: url("https://c.radikal.ru/c30/1908/00/8a8a05c2eed8.png");}
-  75% {background-image: url("https://d.radikal.ru/d08/1908/b4/10bbd9d005ce.png");}
-  50% {background-image: url("https://a.radikal.ru/a33/1908/0d/18b1f3820b3b.png");}
-  25% {background-image: url("https://c.radikal.ru/c15/1908/5e/b6b7e05f5a02.png");}
-  0% {background-image: url("https://b.radikal.ru/b15/1908/84/571f90d88fd2.png");}
-}
-
-
-@-webkit-keyframes chron {
-  100% {background-image: url("https://c.radikal.ru/c30/1908/00/8a8a05c2eed8.png");}
-  75% {background-image: url("https://d.radikal.ru/d08/1908/b4/10bbd9d005ce.png");}
-  50% {background-image: url("https://a.radikal.ru/a33/1908/0d/18b1f3820b3b.png");}
-  25% {background-image: url("https://c.radikal.ru/c15/1908/5e/b6b7e05f5a02.png");}
-  0% {background-image: url("https://b.radikal.ru/b15/1908/84/571f90d88fd2.png");}
-}
-
-
-@keyframes chron2 {
-  100% {background-image: url("https://c.radikal.ru/c30/1908/00/8a8a05c2eed8.png");}
-  75% {background-image: url("https://d.radikal.ru/d08/1908/b4/10bbd9d005ce.png");}
-  50% {background-image: url("https://a.radikal.ru/a33/1908/0d/18b1f3820b3b.png");}
-  25% {background-image: url("https://c.radikal.ru/c15/1908/5e/b6b7e05f5a02.png");}
-  0% {background-image: url("https://b.radikal.ru/b15/1908/84/571f90d88fd2.png");}
-}
-
-
-@-webkit-keyframes chron2 {
-  100% {background-image: url("https://c.radikal.ru/c30/1908/00/8a8a05c2eed8.png");}
-  75% {background-image: url("https://d.radikal.ru/d08/1908/b4/10bbd9d005ce.png");}
-  50% {background-image: url("https://a.radikal.ru/a33/1908/0d/18b1f3820b3b.png");}
-  25% {background-image: url("https://c.radikal.ru/c15/1908/5e/b6b7e05f5a02.png");}
-  0% {background-image: url("https://b.radikal.ru/b15/1908/84/571f90d88fd2.png");}
-}
-
-
-@keyframes state {
-  100% {background-image: url("https://a.radikal.ru/a03/1908/0d/78291016431f.png");}
-  75% {background-image: url("https://c.radikal.ru/c03/1908/57/2a511e6a5f71.png");}
-  50% {background-image: url("https://c.radikal.ru/c28/1908/2a/8f07caed1b9a.png");}
-  25% {background-image: url("https://d.radikal.ru/d00/1908/50/9e90c411f04f.png");}
-  0% {background-image: url("https://b.radikal.ru/b35/1908/fc/3355f6283aa1.png");}
-}
-
-@-webkit-keyframes state {
-  100% {background-image: url("https://a.radikal.ru/a03/1908/0d/78291016431f.png");}
-  75% {background-image: url("https://c.radikal.ru/c03/1908/57/2a511e6a5f71.png");}
-  50% {background-image: url("https://c.radikal.ru/c28/1908/2a/8f07caed1b9a.png");}
-  25% {background-image: url("https://d.radikal.ru/d00/1908/50/9e90c411f04f.png");}
-  0% {background-image: url("https://b.radikal.ru/b35/1908/fc/3355f6283aa1.png");}
-}
-
-
-@keyframes state2 {
-  100% {background-image: url("https://a.radikal.ru/a03/1908/0d/78291016431f.png");}
-  75% {background-image: url("https://c.radikal.ru/c03/1908/57/2a511e6a5f71.png");}
-  50% {background-image: url("https://c.radikal.ru/c28/1908/2a/8f07caed1b9a.png");}
-  25% {background-image: url("https://d.radikal.ru/d00/1908/50/9e90c411f04f.png");}
-  0% {background-image: url("https://b.radikal.ru/b35/1908/fc/3355f6283aa1.png");}
-}
-
-
-@-webkit-keyframes state2 {
-  100% {background-image: url("https://a.radikal.ru/a03/1908/0d/78291016431f.png");}
-  75% {background-image: url("https://c.radikal.ru/c03/1908/57/2a511e6a5f71.png");}
-  50% {background-image: url("https://c.radikal.ru/c28/1908/2a/8f07caed1b9a.png");}
-  25% {background-image: url("https://d.radikal.ru/d00/1908/50/9e90c411f04f.png");}
-  0% {background-image: url("https://b.radikal.ru/b35/1908/fc/3355f6283aa1.png");}
-}
-
 </style>
-<body>
-<div id="preload">
-<img src="https://c.radikal.ru/c30/1908/00/8a8a05c2eed8.png"/>
-<img src="https://d.radikal.ru/d08/1908/b4/10bbd9d005ce.png"/>
-<img src="https://a.radikal.ru/a33/1908/0d/18b1f3820b3b.png"/>
-<img src="https://c.radikal.ru/c15/1908/5e/b6b7e05f5a02.png"/>
-<img src="https://b.radikal.ru/b15/1908/84/571f90d88fd2.png"/>
-<img src="https://d.radikal.ru/d16/1908/24/35641297417b.png"/>
-<img src="https://d.radikal.ru/d06/1908/8d/110bf77d885f.png"/>
-<img src="https://c.radikal.ru/c41/1908/79/df53eadabfad.png"/>
-<img src="https://b.radikal.ru/b23/1908/be/4d3237c8a913.png"/>
-<img src="https://a.radikal.ru/a38/1908/1b/8173636dba53.png"/>
-<img src="https://a.radikal.ru/a03/1908/0d/78291016431f.png"/>
-<img src="https://c.radikal.ru/c03/1908/57/2a511e6a5f71.png"/>
-<img src="https://c.radikal.ru/c28/1908/2a/8f07caed1b9a.png"/>
-<img src="https://d.radikal.ru/d00/1908/50/9e90c411f04f.png"/>
-<img src="https://b.radikal.ru/b35/1908/fc/3355f6283aa1.png"/>
+<body><div id="preload"><img src="https://c.radikal.ru/c30/1909/29/f602721e67af.png"><img src="https://d.radikal.ru/d14/1909/8f/7118807b560b.png"><img src="https://a.radikal.ru/a14/1909/26/a3fe7275efb6.png"></div><div style="position: relative; text-align: center; margin: -4px"><img src="https://c.radikal.ru/c30/1909/29/f602721e67af.png" style="height: 25"></div>
+<div id="Links" style="text-align: center; word-spacing: 8px;"><a id="link" href="http://www.amalirr.com/t949-topic#40107">Чары</a> <a id="link" href="http://www.amalirr.com/t1208-topic#62820">Хроника</a> <a id="link" href="http://www.amalirr.com/t948-topic#40106">Вещи</a></div>
+<div style="position: relative; text-align: center;"><img src="https://d.radikal.ru/d14/1909/8f/7118807b560b.png" style="height: 25"></div>
+</div><div style="position: relative; margin-top: -13px; left: 50%; transform: translateX(-50%); width: 140px; text-align: center;">
 
-</div>
 
-<div style="position: fixed; left: 50%; transform: translateX(-50%); width: 400px; z-index: 1;"><a href="http://www.amalirr.com/t1911-topic#107391" target="_blank"><div id="inv" style="float: left"></div></a>
-<a href="http://www.amalirr.com/t1912-topic#107392" target="_blank"><div id="chron" style="float: right;"></div></a></div>
-<a><div id="state" style="position: fixed; top: 45px; left: 50%; transform: translateX(-50%);"></div></a>
-<a><div id="text" style="position: fixed; top: 8px; left: 50%; transform: translateX(-50%);">Тело ноет, мышцы сводит от усталости, зато похмелье уже прошло...</div></a>
-</div>
-<script type="text/javascript"> 
-        document.getElementById("state").onmouseover = function() { 
-  var x = document.getElementById("myDIV");
-  if (document.getElementById("inv").style.opacity === "0") {
-    document.getElementById("inv").style.opacity = "1";
-    document.getElementById("chron").style.opacity = "1";
-    document.getElementById("text").style.opacity = "0";
-  } else {
-    document.getElementById("inv").style.opacity = "0";
-    document.getElementById("chron").style.opacity = "0";
-    document.getElementById("text").style.opacity = "1";
-  }
-}
-        document.getElementById("state").onmouseout = function() { 
-  var x = document.getElementById("myDIV");
-  if (document.getElementById("inv").style.opacity === "0") {
-    document.getElementById("inv").style.opacity = "1";
-    document.getElementById("chron").style.opacity = "1";
-    document.getElementById("text").style.opacity = "0";
-  } else {
-    document.getElementById("inv").style.opacity = "0";
-    document.getElementById("chron").style.opacity = "0";
-    document.getElementById("text").style.opacity = "1";
-  }
-}
-    </script> 
-</body>
-</html>
+<a>Заметно сильное утомление и тотальное офигевание от происходящего.</a>
+
+
+</div><div style="position: relative; text-align: center;"><img src="https://a.radikal.ru/a14/1909/26/a3fe7275efb6.png" style="height: 25"></div></body></html>
